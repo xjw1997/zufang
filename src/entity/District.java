@@ -1,15 +1,14 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 public class District {
     private Integer id;
     private String name;
+    private Collection<Street> streets;
 
     @Id
     @Column(name = "ID", nullable = false)
@@ -44,5 +43,14 @@ public class District {
     public int hashCode() {
 
         return Objects.hash(id, name);
+    }
+
+    @OneToMany(mappedBy = "districts")
+    public Collection<Street> getStreets() {
+        return streets;
+    }
+
+    public void setStreets(Collection<Street> streets) {
+        this.streets = streets;
     }
 }

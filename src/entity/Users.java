@@ -1,9 +1,7 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +12,7 @@ public class Users {
     private String username;
     private String password;
     private String isadmin;
+    private Collection<House> houses;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -92,5 +91,14 @@ public class Users {
     public int hashCode() {
 
         return Objects.hash(id, name, phone, username, password, isadmin);
+    }
+
+    @OneToMany(mappedBy = "users")
+    public Collection<House> getHouses() {
+        return houses;
+    }
+
+    public void setHouses(Collection<House> houses) {
+        this.houses = houses;
     }
 }

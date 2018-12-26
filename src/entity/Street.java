@@ -1,12 +1,14 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 public class Street {
     private Integer id;
     private String name;
+    private Collection<House> houses;
     private District districts;
 
     @Id
@@ -42,6 +44,15 @@ public class Street {
     public int hashCode() {
 
         return Objects.hash(id, name);
+    }
+
+    @OneToMany(mappedBy = "streets")
+    public Collection<House> getHouses() {
+        return houses;
+    }
+
+    public void setHouses(Collection<House> houses) {
+        this.houses = houses;
     }
 
     @ManyToOne

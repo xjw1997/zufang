@@ -1,10 +1,8 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -16,6 +14,10 @@ public class House {
     private Date pubdate;
     private Integer floorage;
     private String contact;
+    private Users users;
+    private Types types;
+    private Street streets;
+    private Collection<Lease> leases;
 
     @Id
     @Column(name = "ID", nullable = false)
@@ -105,5 +107,44 @@ public class House {
     public int hashCode() {
 
         return Objects.hash(id, title, description, price, pubdate, floorage, contact);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "USERID", referencedColumnName = "id")
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "TYPEID", referencedColumnName = "ID")
+    public Types getTypes() {
+        return types;
+    }
+
+    public void setTypes(Types types) {
+        this.types = types;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "STREETID", referencedColumnName = "ID")
+    public Street getStreets() {
+        return streets;
+    }
+
+    public void setStreets(Street streets) {
+        this.streets = streets;
+    }
+
+    @OneToMany(mappedBy = "houses")
+    public Collection<Lease> getLeases() {
+        return leases;
+    }
+
+    public void setLeases(Collection<Lease> leases) {
+        this.leases = leases;
     }
 }

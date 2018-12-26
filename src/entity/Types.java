@@ -1,15 +1,14 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 public class Types {
     private Integer id;
     private String name;
+    private Collection<House> houses;
 
     @Id
     @Column(name = "ID", nullable = false)
@@ -44,5 +43,14 @@ public class Types {
     public int hashCode() {
 
         return Objects.hash(id, name);
+    }
+
+    @OneToMany(mappedBy = "types")
+    public Collection<House> getHouses() {
+        return houses;
+    }
+
+    public void setHouses(Collection<House> houses) {
+        this.houses = houses;
     }
 }
