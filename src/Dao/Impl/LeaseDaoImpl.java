@@ -1,7 +1,7 @@
 package Dao.Impl;
 
 import Dao.LeaseDao;
-import Util.HibernateUtil;
+import util.HibernateUtil;
 import entity.House;
 import entity.Lease;
 import entity.Users;
