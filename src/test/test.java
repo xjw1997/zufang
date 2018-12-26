@@ -7,6 +7,6 @@ public class test {
     public static void main(final String[] args){
         int i =1;
         House h = new HouseDaoImpl().findHouseById(i);
-        System.out.println(h);
+        System.out.println(h.getDescription());
     }
 }
