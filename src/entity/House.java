@@ -31,6 +31,7 @@ public class House {
     }
 
     @Basic
+
     @Column(name = "TITLE", nullable = true, length = 150)
     public String getTitle() {
         return title;

@@ -29,23 +29,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://D:/myeclipse/plugins/com.genuitec.eclipse.server.embedded.tomcat.core_13.0.0.me201612211440/tomcat85/lib/servlet-api.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://D:/学习/hibernate/chapter08/WebRoot/WEB-INF/lib/mysql-jdbc.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="mysql-jdbc" level="project" />
+    <orderEntry type="library" name="servlet-api" level="project" />
   </component>
 </module>
