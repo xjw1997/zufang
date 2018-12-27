@@ -11,6 +11,7 @@ public class Types {
     private Collection<House> houses;
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "ID", nullable = false)
     public Integer getId() {
         return id;
