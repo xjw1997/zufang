@@ -2,11 +2,13 @@ package Dao.Impl;
 
 import Dao.HouseDao;
 import entity.Lease;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import util.HibernateUtil;
 import entity.House;
 import org.hibernate.Session;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class HouseDaoImpl implements HouseDao {
@@ -25,6 +27,27 @@ public class HouseDaoImpl implements HouseDao {
 
     @Override
     public Boolean updateHouseById(House house, Lease lease) {
-        return null;
+        Session session = HibernateUtil.currentSession();
+        House h = session.get(House.class,house.getId());
+        if (h.getDescription().equals("否")){
+            Transaction tx = session.beginTransaction();
+            boolean is = false;
+            try {
+                h.setDescription("是");
+                Serializable s = session.save(lease);
+                Object o = session.merge(h);
+                is = (o==null&&s==null)?(false):(true);
+                tx.commit();
+            }catch (Exception e) {
+                // TODO: handle exception
+                e.printStackTrace();
+            }finally {
+                session.close();
+            }
+            return is;
+        }else {
+            return false;
+        }
+
     }
 }
