@@ -31,6 +31,7 @@ public class LeaseDaoImpl implements LeaseDao {
         try {
             Lease l = (Lease) session.get(Lease.class,lease.getId());
             l.setEnddate(lease.getEnddate());
+            session.clear();
             Object o =session.merge(l);
             tx.commit();
             is=(o==null)?(false):(true);
@@ -38,7 +39,7 @@ public class LeaseDaoImpl implements LeaseDao {
             e.printStackTrace();
             tx.rollback();
         }finally {
-                session.close();
+                HibernateUtil.closeSession();
         }
         return is;
     }

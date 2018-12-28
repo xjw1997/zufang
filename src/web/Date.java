@@ -1,7 +1,6 @@
 package web;
 
 import Dao.Impl.LeaseDaoImpl;
-import Dao.LeaseDao;
 import entity.Lease;
 
 import javax.servlet.ServletException;
@@ -9,12 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "sale")
-public class sale extends HttpServlet {
+public class Date extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
     }
@@ -23,9 +20,12 @@ public class sale extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         Integer id = Integer.parseInt(request.getParameter("id"));
-        List<Lease> list = new LeaseDaoImpl().FindAllLeases(id);
-        HttpSession session = request.getSession();
-        session.setAttribute("list2",list);
+        java.util.Date date = new java.util.Date();
+        Lease lease = new Lease();
+        lease.setEnddate(date);
+        lease.setId(id);
+        boolean is =  new LeaseDaoImpl().UpdateEndDate(lease);
         request.getRequestDispatcher("jiesuan.jsp").forward(request,response);
+
     }
 }
