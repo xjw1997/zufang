@@ -16,11 +16,11 @@
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <title>登录界面</title>
-    <link href="./css/default.css" rel="stylesheet" type="text/css" />
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
     <!--必要样式-->
-    <link href="./css/styles1.css" rel="stylesheet" type="text/css" />
-    <link href="./css/demo.css" rel="stylesheet" type="text/css" />
-    <link href="./css/loaders.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles1.css" rel="stylesheet" type="text/css" />
+    <link href="css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="css/loaders.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class='login'>
@@ -78,14 +78,14 @@
     <p>认证中...</p>
 </div>
 <div class="OverWindows"></div>
-<link href="./layui/css/layui.css" rel="stylesheet" type="text/css" />
-<script src="./js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
-<script type="text/javascript" src='./js/stopExecutionOnTimeout.js?t=1'></script>
-<script src="./layui/layui.js" type="text/javascript"></script>
-<script src="./js/Particleground.js" type="text/javascript"></script>
-<script src="./js/Treatment.js" type="text/javascript"></script>
-<script src="./js/jquery.mockjax.js" type="text/javascript"></script>
+<link href="layui/css/layui.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src='js/stopExecutionOnTimeout.js?t=1'></script>
+<script src="layui/layui.js" type="text/javascript"></script>
+<script src="js/Particleground.js" type="text/javascript"></script>
+<script src="js/Treatment.js" type="text/javascript"></script>
+<script src="js/jquery.mockjax.js" type="text/javascript"></script>
 <script type="text/javascript">
     var canGetCookie = 0;//是否支持存储Cookie 0 不支持 1 支持
     var ajaxmockjax = 1;//是否启用虚拟Ajax的请求响 0 不启用  1 启用
