@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2018/12/27 0027
-  Time: 11:31
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -78,14 +72,14 @@
     <p>认证中...</p>
 </div>
 <div class="OverWindows"></div>
-<link href="./layui/css/layui.css" rel="stylesheet" type="text/css" />
-<script src="./js/jquery-1.11.0.min.js"></script>
+<link href="layui/css/layui.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-2.11.1.min.js" />
 <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
 <script type="text/javascript" src='./js/stopExecutionOnTimeout.js?t=1'></script>
-<script src="./layui/layui.js" type="text/javascript"></script>
-<script src="./js/Particleground.js" type="text/javascript"></script>
-<script src="./js/Treatment.js" type="text/javascript"></script>
-<script src="./js/jquery.mockjax.js" type="text/javascript"></script>
+<script src="layui/layui.js" type="text/javascript"></script>
+<script src="js/Particleground.js" type="text/javascript"></script>
+<script src="js/Treatment.js" type="text/javascript"></script>
+<script src="js/jquery.mockjax.js" type="text/javascript"></script>
 <script type="text/javascript">
     var canGetCookie = 0;//是否支持存储Cookie 0 不支持 1 支持
     var ajaxmockjax = 1;//是否启用虚拟Ajax的请求响 0 不启用  1 启用
