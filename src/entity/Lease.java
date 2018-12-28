@@ -1,7 +1,10 @@
 package entity;
 
+import com.sun.istack.internal.Nullable;
+
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
+
 import java.util.Objects;
 
 @Entity
@@ -15,6 +18,7 @@ public class Lease {
     private House houses;
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "ID", nullable = false)
     public Integer getId() {
         return id;
@@ -55,7 +59,7 @@ public class Lease {
     }
 
     @Basic
-    @Column(name = "ENDDATE", nullable = false)
+    @Column(name = "ENDDATE")
     public Date getEnddate() {
         return enddate;
     }
