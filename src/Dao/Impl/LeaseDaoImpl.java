@@ -18,7 +18,7 @@ public class LeaseDaoImpl implements LeaseDao {
         Session session = HibernateUtil.currentSession();
         List<Lease> list = session.createCriteria(Lease.class,"l")
                 .createCriteria("l.houses","h").createCriteria("h.users","u")
-                .add(Restrictions.eq("h.description","出租"))
+                .add(Restrictions.eq("h.description","是"))
                 .add(Restrictions.eq("u.id",UserID)).list();
         return list;
     }
