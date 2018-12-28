@@ -12,6 +12,7 @@ public class Street {
     private District districts;
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "ID", nullable = false)
     public Integer getId() {
         return id;
