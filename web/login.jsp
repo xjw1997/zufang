@@ -183,6 +183,7 @@
                         url:"login?name="+login+"&pwd="+pwd,
                         type:"post",
                         dataType:"text",
+                        data:"{}",
                         success:function(text){
                             if(text == "1"){
                                 location.href = 'home';
@@ -190,8 +191,9 @@
                                 layer.msg("登录失败");
                             }
                         },
-                        error:function(){
-                            alert("请求失败");
+                        error:function(XMLHttpRequest, textStatus, errorThrown){
+                            alert(XMLHttpRequest.status);
+                            alert(errorThrown);
                         }
                     });
                 }, 2000);

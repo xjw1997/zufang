@@ -9,8 +9,8 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="lib" />
           <element id="library" level="project" name="mysql-jdbc" />
-<<<<<<< HEAD
-=======
+
+
           <element id="library" level="project" name="hibernate-commons-annotations-5.0.4.Final" />
           <element id="library" level="project" name="hibernate-core-5.3.7.Final" />
           <element id="library" level="project" name="dom4j-2.1.1" />
