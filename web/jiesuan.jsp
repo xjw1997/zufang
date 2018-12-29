@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Default Variation</title>
@@ -39,8 +40,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 controlNav: "thumbnails"
             });
         });
+        $('.btn').click(function(){
+            var id =
+            location.href=Date?
+        })
     </script>
     <!-- //FlexSlider-->
+
 </head>
 <body>
 
@@ -177,15 +183,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <p>人文环境一流，隶属于中高档次社区。此房南北朝向，格局相当漂亮，双卧和客厅是分离开的，客厅有独立的2个面，特别好摆家具和电器。户型，位置独特，视野开阔，空气清新，紧对花园，特别适合居家过日子。清晨时，您站在客厅里，沐浴着旭日的光辉，精神饱和舒畅！</p>
                     <div class="additional-details">
+                        <c:forEach var="l" items="${list2 }">
                         <h3>其他详细信息</h3>
                         <ul>
-                            <li><span>姓名：   </span><input type="text" name="name"/></li>
-                            <li><span>联系电话 ：</span><input type="text" name="phone"/></li>
-                            <li><span>起租日期：</span><input type="date" name="startdate"/></li>
-                            <li><span>结束日期：</span><input type="date" name="enddate"/></li>
-                            <li><span>押金：</span> <input type="text" name="deposit"/></li>
+                            <li><span>姓名：${l.name }   </span><input type="text" name="name"/></li>
+                            <li><span>联系电话 ：${l.phone }</span><input type="text" name="phone"/></li>
+                            <li><span>起租日期：${l.startdate }</span><input type="date" name="startdate"/></li>
+                            <li><span>结束日期：${l.enddate }</span><input type="date" name="enddate"/></li>
+                            <li><span>押金：${l.deposit }</span> <input type="text" name="deposit"/></li>
                             <li><input type="button" class="btn"/></li>
                         </ul>
+                        </c:forEach>
+                        <p>退租：${l.deposit }-${day*200 }</p>
                     </div>
                     <div class="note">
                         <h4>指导价位</h4>

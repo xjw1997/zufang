@@ -180,7 +180,7 @@
 
                 setTimeout(function(){
                     $.ajax({
-                        url:"First?name="+login+"&pwd="+pwd,
+                        url:"login?name="+login+"&pwd="+pwd,
                         type:"get",
                         dataType:"text",
                         success:function(text){

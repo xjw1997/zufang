@@ -10,6 +10,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 public class LeaseDaoImpl implements LeaseDao {
@@ -43,4 +44,6 @@ public class LeaseDaoImpl implements LeaseDao {
         }
         return is;
     }
+
+
 }
