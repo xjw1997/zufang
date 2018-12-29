@@ -144,26 +144,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <p>地理位置通透，交通便利，是个不可多得的好地方</p>
                     </div>
                     <div class="history">
-                        <h4>房屋类型</h4>
-                        <p>别墅</p>
+                        <h4><span>房屋类型</span>    <span>联系人</span></h4>
+                        <p><span>${xqList.title}</span>    <span>${xqList.contact}</span></p>
                     </div>
                     <div class="rules">
-                        <h4>房屋面积</h4>
-                        <p class="rules-text">140㎡</p>
+                        <h4>每日租金</h4>
+                        <p class="rules-text">${xqList.price}</p>
                     </div>
                     <div class="traditions">
                         <h4>房屋介绍</h4>
                         <p class="rules-text">畅想真正的浪漫花园洋房生活,回家就是一种度假</p>
                         <p class="trad">此小区环境优美,绿化率高,闹中取静。虽然房龄不是很新,但就是因为它的地段的优越,小区封闭式管理,房型都是独门独户,所以一直被人们追捧。车站就在小区门口,商场和超市步行过去也只要10分钟。学校步行五分钟离得非常近。</p>
                         <p class="rules-text">人文环境一流，隶属于中高档次社区。此房南北朝向，格局相当漂亮，双卧和客厅是分离开的，客厅有独立的2个面，特别好摆家具和电器。户型，位置独特，视野开阔，空气清新，紧对花园，特别适合居家过日子。清晨时，您站在客厅里，沐浴着旭日的光辉，精神饱和舒畅！</p>
+
                     </div>
                     <!---RESPONSES--->
-                    <div class="coment-form">
-                        <div class="container">
-
-                        </div>
+                    <div class="coment-form" style="text-align: center">
+                        <input type="button" class="btn" value="确认租房"/>
                     </div>
                 </div>
+                <script type="text/javascript">
+                    $('.btn').click(function () {
+                        var houseId = ${xqList.houseid}
+                        location.href="jiesuan,jsp?houseId="+houseId;
+                    })
+                </script>
                 <div class="col-md-3 blog-grid1">
                     <div class="categ">
                         <h3>类别</h3>

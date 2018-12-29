@@ -26,7 +26,7 @@ public class House {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String houseId) {
         this.id = id;
     }
 
@@ -149,4 +149,5 @@ public class House {
     public void setLeases(Collection<Lease> leases) {
         this.leases = leases;
     }
+
 }

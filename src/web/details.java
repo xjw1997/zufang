@@ -20,9 +20,12 @@ public class details extends HttpServlet {
         response.setContentType("text/html");
         HttpSession session = request.getSession();
         House house = (House) session.getAttribute("h");
-        List<House> xiangqingList = (List<House>) new HouseDaoImpl().findHouseById(house.getId());
-        request.setAttribute("xiangqignList",xiangqingList);
+        List<House> xqList = (List<House>) new HouseDaoImpl().findHouseById(house.getId());
+        request.setAttribute("xqList",xqList);
         request.getRequestDispatcher("xiangqing.jsp").forward(request,response);
+
+        String houseId = request.getParameter("houseId");
+        request.getRequestDispatcher("jiesuan.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

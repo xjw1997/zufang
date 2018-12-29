@@ -1,6 +1,5 @@
 package entity;
 
-import com.sun.istack.internal.Nullable;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -106,4 +105,5 @@ public class Lease {
     public void setHouses(House houses) {
         this.houses = houses;
     }
+
 }

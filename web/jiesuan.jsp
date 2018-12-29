@@ -179,11 +179,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="additional-details">
                         <h3>其他详细信息</h3>
                         <ul>
-                            <li><span>姓名：   </span><input type="text" name="name"/></li>
-                            <li><span>联系电话 ：</span><input type="text" name="phone"/></li>
-                            <li><span>起租日期：</span><input type="date" name="startdate"/></li>
-                            <li><span>结束日期：</span><input type="date" name="enddate"/></li>
-                            <li><span>押金：</span> <input type="text" name="deposit"/></li>
+                            <li><span>姓名：   </span><input type="text" name="name" class="name"/></li>
+                            <li><span>联系电话 ：</span><input type="text" name="phone" class="phone"/></li>
+                            <li><span>起租日期：</span><input type="date" name="startdate" class="startdate"/></li>
+                            <li><span>结束日期：</span><input type="date" name="enddate" class="enddate"/></li>
+                            <li><span>押金：</span> <input type="text" name="deposit" class="deposit"/></li>
                             <li><input type="button" class="btn"/></li>
                         </ul>
                     </div>
@@ -191,5 +191,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <h4>指导价位</h4>
                         <p>月租7000$向上    是不可多得的居家好房</p>
                     </div>
+                    <script type="text/javascript">
+                        $('.btn').click(function () {
+                            var houseId = ${xqList.houseid}
+                            var name = $(".name").val();
+                            var phone = $(".phone").val();
+                            var startdate = $(".startdate").val();
+                            var deposit = $(".deposit").val();
+                            location.href="Renting?houseId="+houseId+"&&name="+name+"&&phone="+phone+"&&startdate="+startdate+"&&deposit="+deposit;
+                        })
+                    </script>
 </body>
 </html>
