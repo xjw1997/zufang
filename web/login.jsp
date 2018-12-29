@@ -10,11 +10,11 @@
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <title>登录界面</title>
-    <link href="./css/default.css" rel="stylesheet" type="text/css" />
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
     <!--必要样式-->
-    <link href="./css/styles1.css" rel="stylesheet" type="text/css" />
-    <link href="./css/demo.css" rel="stylesheet" type="text/css" />
-    <link href="./css/loaders.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles1.css" rel="stylesheet" type="text/css" />
+    <link href="css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="css/loaders.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class='login'>
@@ -73,9 +73,15 @@
 </div>
 <div class="OverWindows"></div>
 <link href="layui/css/layui.css" rel="stylesheet" type="text/css" />
+<<<<<<< HEAD
 <script src="js/jquery-2.11.1.min.js" />
 <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
 <script type="text/javascript" src='./js/stopExecutionOnTimeout.js?t=1'></script>
+=======
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src='js/stopExecutionOnTimeout.js?t=1'></script>
+>>>>>>> origin/master
 <script src="layui/layui.js" type="text/javascript"></script>
 <script src="js/Particleground.js" type="text/javascript"></script>
 <script src="js/Treatment.js" type="text/javascript"></script>
