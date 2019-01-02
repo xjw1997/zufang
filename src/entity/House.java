@@ -19,6 +19,7 @@ public class House {
     private Street streets;
     private Collection<Lease> leases;
 
+    @SuppressWarnings("JpaAttributeMemberSignatureInspection")
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "ID", nullable = false)
