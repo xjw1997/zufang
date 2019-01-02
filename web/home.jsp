@@ -1,7 +1,9 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+
   <title>Home</title>
   <!---css--->
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -287,6 +289,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
     </div>
   </div>
+  <c:forEach var="l" items="${list }">
   <div class="offering">
     <div class="container">
       <h3>我们提供最好的房屋交易</h3>
@@ -300,136 +303,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               </div>
               <div class="offer-right">
                 <h5><label>$</label> 每月7500 - <span>独立住宅</span></h5>
-                <p>好房不可多得</p>
+                <p>联系人：${l.name } 联系电话：${l.phone }</p>
                 <a href="single.html"class="button1">了解更多</a>
               </div>
               <div class="clearfix"></div>
             </div>
           </div>
         </div>
-        <div class="col-md-6 offer-grid">
-          <div class="offer-grid1">
-            <h4><a href="single.html">401迈阿密大道</a></h4>
-            <div class="offer1">
-              <div class="offer-left">
-                <a href="single.html" class="mask"><img src="images/p4.jpg" class="img-responsive zoom-img" alt=""/></a>
-              </div>
-              <div class="offer-right">
-                <h5><label>$</label> 每月3250 - <span>集体公寓</span></h5>
-                <p>好房不可多得</p>
-                <a href="single.html"class="button1">了解更多</a>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-      <div class="offer-grids">
-        <div class="col-md-6 offer-grid">
-          <div class="offer-grid1">
-            <h4><a href="single.html">3895司思侃大街</a></h4>
-            <div class="offer1">
-              <div class="offer-left">
-                <a href="single.html" class="mask"><img src="images/p5.jpg" class="img-responsive zoom-img" alt=""/></a>
-              </div>
-              <div class="offer-right">
-                <h5><label>$</label> 每月5200 - <span>办公室</span></h5>
-                <p>办公佳选</p>
-                <a href="single.html"class="button1">了解更多</a>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 offer-grid">
-          <div class="offer-grid1">
-            <h4><a href="single.html">1400 Anastasia Avenue, Coral</a></h4>
-            <div class="offer1">
-              <div class="offer-left">
-                <a href="single.html" class="mask"><img src="images/p6.jpg" class="img-responsive zoom-img" alt=""/></a>
-              </div>
-              <div class="offer-right">
-                <h5><label>$</label> 10000 - <span>别墅</span></h5>
-                <p>自行体会</p>
-                <a href="single.html"class="button1">了解更多</a>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-      <div class="offer-grids">
-        <div class="col-md-6 offer-grid">
-          <div class="offer-grid1">
-            <h4><a href="#">A型公寓12间</a></h4>
-            <div class="offer1">
-              <div class="offer-left">
-                <a href="single.html" class="mask"><img src="images/p7.jpg" class="img-responsive zoom-img" alt=""/></a>
-              </div>
-              <div class="offer-right">
-                <h5><label>$</label> 每月1200 - <span>公寓</span></h5>
-                <p>物美价廉</p>
-                <a href="single.html"class="button1">了解更多</a>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 offer-grid">
-          <div class="offer-grid1">
-            <h4><a href="single.html">B型公寓20间</a></h4>
-            <div class="offer1">
-              <div class="offer-left">
-                <a href="single.html" class="mask"><img src="images/p8.jpg" class="img-responsive zoom-img" alt=""/></a>
-              </div>
-              <div class="offer-right">
-                <h5><label>$</label> 每月1000 - <span>公寓</span></h5>
-                <a href="single.html"class="button1">了解更多</a>
-                <p>物美价廉</p>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </div>
-  <!---Featured Properties--->
-  <div class="feature-section">
-    <div class="container">
-      <h3>特色物业</h3>
-      <div class="feature-grids">
-        <div class="col-md-3 feature-grid">
-          <img src="images/f1.jpg" class="img-responsive" alt="/">
-          <h5>别墅海思窝凯</h5>
-          <p>不可多得的好地方 <a href="#">了解更多</a></p>
-          <span>每月7500</span>
-        </div>
-        <div class="col-md-3 feature-grid">
-          <img src="images/f2.jpg" class="img-responsive" alt="/">
-          <h5>401比斯坎大道</h5>
-          <p>看着怎么样 <a href="#">了解更多</a></p>
-          <span>每月5000</span>
-        </div>
-        <div class="col-md-3 feature-grid">
-          <img src="images/f3.jpg" class="img-responsive" alt="/">
-          <h5>154西南地区</h5>
-          <p>很棒的地方 <a href="#">了解更多</a></p>
-          <span>每月3000</span>
-        </div>
-        <div class="col-md-3 feature-grid">
-          <img src="images/f4.jpg" class="img-responsive" alt="/">
-          <h5>佛罗里达州5</h5>
-          <p>风景优美 <a href="#">了解更多</a></p>
-          <span>每月4000</span>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </div>
+        </c:forEach>
+
   <!---Featured Properties--->
   <div class="membership">
     <div class="container">
