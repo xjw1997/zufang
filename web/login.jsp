@@ -190,8 +190,9 @@
                                 layer.msg("登录失败");
                             }
                         },
-                        error:function(){
-                            alert("请求失败");
+                        error:function(XMLHttpRequest, textStatus, errorThrown){
+                            alert(XMLHttpRequest.status);
+                            alert(errorThrown);
                         }
                     });
                 }, 2000);
