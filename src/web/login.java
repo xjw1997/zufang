@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "login",urlPatterns = "/login")
+@WebServlet(name = "login")
 public class login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-           request.setCharacterEncoding("text/html");
+        request.setCharacterEncoding("text/html");
         PrintWriter out= response.getWriter();
         response.setCharacterEncoding("utf-8");
         String name = request.getParameter("name");
@@ -28,6 +28,6 @@ public class login extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            doPost(request,response);
+        doPost(request,response);
     }
 }
