@@ -8,24 +8,22 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 
-@WebServlet(name = "login",urlPatterns = "/login")
+@WebServlet(name = "login")
 public class login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("text/html");
+        PrintWriter out= response.getWriter();
         response.setCharacterEncoding("utf-8");
         String name = request.getParameter("name");
         String pwd = request.getParameter("pwd");
         Users users = new UsersDaoImpl().login(name,pwd);
-        HttpSession session = request.getSession();
         if (users != null){
-            session.setAttribute("name", name);
-            session.setAttribute("id", users.getId());
-            response.getWriter().write("1");
+            out.write(1);
         }else{
-            response.getWriter().write("-1");
+            out.write(-1);
         }
     }
 
