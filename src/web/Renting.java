@@ -13,9 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @WebServlet(name = " Renting")
 public class Renting extends HttpServlet {
@@ -26,7 +24,7 @@ public class Renting extends HttpServlet {
         HttpSession session = request.getSession();
         House house = new House();
         Lease lease = new Lease();
-        house.setId(request.getParameter("houseId"));
+        house.setId(Integer.parseInt(request.getParameter("houseId")));
         lease.setName(request.getParameter("name"));
         lease.setPhone(request.getParameter("phone"));
         SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
