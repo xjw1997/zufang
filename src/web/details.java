@@ -17,6 +17,7 @@ public class details extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         response.setContentType("text/html");
+        //ssss
         HttpSession session = request.getSession();
         Integer id = Integer.parseInt(request.getParameter("id"));
         House house =  new HouseDaoImpl().findHouseById(id);

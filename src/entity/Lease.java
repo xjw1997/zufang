@@ -2,13 +2,12 @@ package entity;
 
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
 import java.util.Objects;
 
 @Entity
-public class Lease implements Serializable {
+public class Lease {
     private Integer id;
     private String name;
     private String phone;

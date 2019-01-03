@@ -1,13 +1,12 @@
 package entity;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.sql.Date;
 import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-public class House implements Serializable {
+public class House {
     private Integer id;
     private String title;
     private String description;

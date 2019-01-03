@@ -1,12 +1,11 @@
 package entity;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-public class Users implements Serializable {
+public class Users {
     private Integer id;
     private String name;
     private String phone;

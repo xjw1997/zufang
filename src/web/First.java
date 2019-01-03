@@ -21,6 +21,7 @@ public class First extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
+        //sss
         HttpSession session = request.getSession();
         Integer id =Integer.parseInt(session.getAttribute("id").toString()) ;
         List<House> list = new HouseDaoImpl().FindAllHousesByID(id);
