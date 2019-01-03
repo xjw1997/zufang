@@ -26,7 +26,7 @@ public class Renting extends HttpServlet {
         HttpSession session = request.getSession();
         House house = new House();
         Lease lease = new Lease();
-        house.setId(request.getParameter("houseId"));
+        house.setId(Integer.parseInt(request.getParameter("houseId")));
         lease.setName(request.getParameter("name"));
         lease.setPhone(request.getParameter("phone"));
         SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");

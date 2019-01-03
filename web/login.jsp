@@ -185,7 +185,7 @@
                         dataType:"text",
                         success:function(text){
                             if(text == "1"){
-                                location.href = 'home';
+                                location.href = 'First';
                             }else if(text == "-1"){
                                 layer.msg("登录失败");
                             }

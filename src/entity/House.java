@@ -27,7 +27,7 @@ public class House {
         return id;
     }
 
-    public void setId(String houseId) {
+    public void setId(Integer houseId) {
         this.id = id;
     }
 

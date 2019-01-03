@@ -303,7 +303,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               </div>
               <div class="offer-right">
                 <h5><label>$</label> 每月7500 - <span>独立住宅</span></h5>
-                <p>联系人：${l.name } 联系电话：${l.phone }</p>
+                <p>联系人：${l.contact } 联系电话：${l.users.phone }</p>
                 <a href="single.html"class="button1">了解更多</a>
               </div>
               <div class="clearfix"></div>
