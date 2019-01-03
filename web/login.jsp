@@ -181,13 +181,17 @@
                 setTimeout(function(){
                     $.ajax({
                         url:"login?name="+login+"&pwd="+pwd,
-                        type:"get",
+                        type:"post",
                         dataType:"text",
+                        data:"",
                         success:function(text){
                             if(text == "1"){
                                 location.href = 'First';
                             }else if(text == "-1"){
                                 layer.msg("登录失败");
+                            }
+                            else {
+                                layer.msg("哈哈");
                             }
                         },
                         error:function(XMLHttpRequest, textStatus, errorThrown){
