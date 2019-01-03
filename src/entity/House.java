@@ -1,12 +1,13 @@
 package entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-public class House {
+public class House implements Serializable {
     private Integer id;
     private String title;
     private String description;
@@ -19,7 +20,6 @@ public class House {
     private Street streets;
     private Collection<Lease> leases;
 
-    @SuppressWarnings("JpaAttributeMemberSignatureInspection")
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "ID", nullable = false)
@@ -27,8 +27,8 @@ public class House {
         return id;
     }
 
-    public void setId(Integer houseId) {
-        this.id = id;
+    public void setId(Integer Id) {
+        this.id = Id;
     }
 
     @Basic

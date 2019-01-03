@@ -145,11 +145,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="history">
                         <h4><span>房屋类型</span>    <span>联系人</span></h4>
-                        <p><span>${xqList.title}</span>    <span>${xqList.contact}</span></p>
+                        <p><span>${house.title}</span>    <span>${house.contact}</span></p>
                     </div>
                     <div class="rules">
                         <h4>每日租金</h4>
-                        <p class="rules-text">${xqList.price}</p>
+                        <p class="rules-text">${house.price}</p>
                     </div>
                     <div class="traditions">
                         <h4>房屋介绍</h4>
@@ -165,7 +165,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <script type="text/javascript">
                     $('.btn').click(function () {
-                        var houseId = ${xqList.houseid}
+                        var houseId = ${house.houseid}
                         location.href="jiesuan,jsp?houseId="+houseId;
                     })
                 </script>

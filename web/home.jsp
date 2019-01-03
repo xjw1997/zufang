@@ -8,7 +8,6 @@
   <!---css--->
   <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
   <link href="css/style.css" rel='stylesheet' type='text/css' />
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <!---css--->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -299,12 +298,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h4><a href="single.html">别墅在海厄利亚</a></h4>
             <div class="offer1">
               <div class="offer-left">
-                <a href="single.html" class="mask"><img src="images/p3.jpg" class="img-responsive zoom-img" alt=""/></a>
+                <a href="details?id=${l.id }" class="mask"><img src="images/p3.jpg" class="img-responsive zoom-img" alt=""/></a>
               </div>
               <div class="offer-right">
-                <h5><label>$</label> 每月7500 - <span>独立住宅</span></h5>
+                <h5><label>${l.id }</label> 每天${l.price} - <span>独立住宅</span></h5>
                 <p>联系人：${l.contact } 联系电话：${l.users.phone }</p>
-                <a href="single.html"class="button1">了解更多</a>
+                <a href="details?id=${l.id }"class="button1">了解更多</a>
               </div>
               <div class="clearfix"></div>
             </div>

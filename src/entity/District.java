@@ -1,11 +1,12 @@
 package entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-public class District {
+public class District implements Serializable {
     private Integer id;
     private String name;
     private Collection<Street> streets;
